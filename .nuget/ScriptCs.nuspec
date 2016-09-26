@@ -16,7 +16,7 @@
     <file src="uninstall.ps1" target="tools"/>
     <file src="..\src\ScriptCs\bin\debug\scriptcs.exe" target="tools" />
     <file src="..\src\ScriptCs\bin\debug\scriptcs.exe.config" target="tools" />
-    <file src="..\src\ScriptCs\bin\debug\*.dll" target="netcore50\lib" />
+    <file src="..\src\ScriptCs\bin\debug\*.dll" target="tools" />
     <file src="..\src\ScriptCs\bin\debug\*.pdb" target="tools" />
   </files>
 </package>
