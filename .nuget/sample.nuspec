@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SamplePowershell</id>
+    <version>1.0.0</version>
+    <title>SamplePowershell</title>
+    <authors>Anonymous</authors>
+    <owners>Epam Systems India</owners>
+    <description>SamplePowershell</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+  <files>
+    <file src="Init.ps1" target="tools"/>
+  </files>
+</package>

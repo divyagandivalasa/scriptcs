@@ -1,4 +1,7 @@
-param($installPath, $toolsPath, $package, $project)
+﻿param($installPath, $toolsPath, $package, $project)
+
+$setPath = Join-Path "$Env:USERPROFILE" -childPath ".nuget"
+@("packages", "ScriptCs","1.0.0", "tools" ) | %{ $setPath = Join-Path $setPath $_ }
 # Get the ID and security principal of the current user account
 $myWindowsID=[System.Security.Principal.WindowsIdentity]::GetCurrent()
 $myWindowsPrincipal=new-object System.Security.Principal.WindowsPrincipal($myWindowsID)
@@ -29,7 +32,7 @@ else
    
    # Start the new process
    [System.Diagnostics.Process]::Start($newProcess);
-   
+   Write-Host -NoNewLine "Press any key to continue..."
    # Exit from the current, unelevated, process
    exit
    }
@@ -37,3 +40,29 @@ else
 # Run your code that needs to be elevated here
 Write-Host -NoNewLine "Press any key to continue..."
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
+function Set-EnvPath {
+    param(
+        [Parameter(Mandatory=$true)]
+        $Path
+    )
+		$write = Read-Host 'Set PATH permanently ? (yes|no)'
+		$persistedPaths = [Environment]::GetEnvironmentVariable('Path', [System.EnvironmentVariableTarget]::Machine) -split ';'
+		if ($write -eq "yes")
+		{	
+			if ($persistedPaths -notContains $Path) 
+			{
+				$persistedPaths = $persistedPaths + $Path | where { $_ }
+				[Environment]::SetEnvironmentVariable('Path', $persistedPaths -Join';', [System.EnvironmentVariableTarget]::Machine)
+			}
+			$envPaths = $env:Path -split ';'
+			if ($envPaths -notcontains $Path) 
+			{
+			    $envPaths = $envPaths + $Path | where { $_ }
+			    $env:Path = $envPaths -Join ';'
+			}
+		    Write-Output 'PATH updated'
+		}               
+}
+Set-EnvPath "$setPath"
+
