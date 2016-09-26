@@ -42,6 +42,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B138045D-DC04-4A04-A2BA-F771173BCC32}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\init.ps1 = .nuget\init.ps1
+		.nuget\Install.ps1 = .nuget\Install.ps1
 		.nuget\packages.config = .nuget\packages.config
 		.nuget\sample.nuspec = .nuget\sample.nuspec
 	EndProjectSection
