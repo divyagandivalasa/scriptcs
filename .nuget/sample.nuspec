@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>SamplePowershell</id>
+    <id>Scriptcs</id>
     <version>1.0.0</version>
-    <title>SamplePowershell</title>
+    <title>Scriptcs</title>
     <authors>Anonymous</authors>
     <owners>Epam Systems India</owners>
-    <description>SamplePowershell</description>
+    <description>Scriptcs</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright 2016</copyright>
   </metadata>
