@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ScriptCs</id>
+    <version>1.0.0</version>
+    <title>ScriptCs</title>
+    <authors>Anonymous</authors>
+    <owners>Epam Systems India</owners>
+    <description>Scriptcs</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2016</copyright>
+  </metadata>
+  <files>
+    <file src="Init.ps1" target="tools"/>
+    <file src="Install.ps1" target="tools"/>
+    <file src="uninstall.ps1" target="tools"/>
+    <file src="..\src\ScriptCs\bin\debug\scriptcs.exe" target="tools" />
+    <file src="..\src\ScriptCs\bin\debug\scriptcs.exe.config" target="tools" />
+    <file src="..\src\ScriptCs\bin\debug\*.dll" target="netcore50\lib" />
+    <file src="..\src\ScriptCs\bin\debug\*.pdb" target="tools" />
+  </files>
+</package>
