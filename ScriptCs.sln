@@ -42,9 +42,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B138045D-DC04-4A04-A2BA-F771173BCC32}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\init.ps1 = .nuget\init.ps1
-		.nuget\Install.ps1 = .nuget\Install.ps1
 		.nuget\packages.config = .nuget\packages.config
-		.nuget\sample.nuspec = .nuget\sample.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptCs.Engine.Roslyn", "src\ScriptCs.Engine.Roslyn\ScriptCs.Engine.Roslyn.csproj", "{E79EC231-E27D-4057-91C9-2D001A3A8C3B}"

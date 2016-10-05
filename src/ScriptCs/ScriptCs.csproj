@@ -115,6 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\debug\scriptcs_packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\chocolateyInstall.ps1" />
     <None Include="Properties\scriptcs.nuspec" />
     <None Include="packages.config" />
